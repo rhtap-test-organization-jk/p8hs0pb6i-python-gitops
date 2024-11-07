@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: p8hs0pb6i-python-gitops
+  description: This is GitOps manifest for p8hs0pb6i-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: p8hs0pb6i-python
+    backstage.io/kubernetes-id: p8hs0pb6i-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: p8hs0pb6i-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:p8hs0pb6i-python
